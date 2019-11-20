@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Raleway&display=swap');
+
+* {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.title {
+  margin-bottom: 3rem;
+  font-size: 10vw;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 800;
+  text-shadow: -5px 5px rgba(0, 0, 255, .2);
+}
+
+body {
+  height: 100vh;
+}
+
+.container-fluid, .row {
+  height:100vh;
+}
+
+div.main-container {
+  background-color: #FFE2EA;
+  padding: 2rem;
+  text-align: center;
+}
+
+.instructions {
+  background-color: rgba(255, 255, 255, 0.4);
+  padding: 0.7rem;
+  border-radius: 15px;
+}
+
+div.button-container {
+  background-color: #FFA2D0;
+}
+
+.button-container, .main-container, #menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+
+#menu {
+  height: 40vh;
+}
+
+#menu p {
+  font-size: 3rem;
+  font-weight: 800;
+  text-shadow: -2px 2px rgba(0, 0, 0, .2);
+}
+
+div.buttons {
+  height: 60vh;
+  display: flex;
+  flex-direction: column;
+}
+
+#compliment-btn, #fact-btn, #shower-btn {
+  margin: 1rem 0;
+  background-color: #ffdf00;
+  color: black;
+  border: solid 1px white;
+  box-shadow: -8px 8px 2px 1px rgba(0, 0, 255, .2);
+}
+
+#compliment-btn:hover, #fact-btn:hover, #shower-btn:hover {
+  background-color: #ffffed;
+  animation: shake 0.6s infinite;
+}
+
+.modal-header {
+  background-color: #0059b3;
+}
+
+.modal-header span {
+  color: white;
+}
+
+.modal-body {
+  height: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #add8e6;
+}
+
+#message {
+  color: black;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+#message-header {
+  color: white;
+  margin-bottom: 0;
+}
+
+@keyframes shake {
+  0% {
+    transform: translate(0px, 0px) rotate(0deg);
+  }
+  25% {
+    transform: translate(1px, 1px) rotate(2deg);
+  }
+  50% {
+    transform: translate(-1px, -1px) rotate(-2deg);
+  }
+  75% {
+    transform: translate(2px, -1px) rotate(3deg);
+  }
+  100% {
+    transform: translate(-1px, 1px) rotate(-2deg);
+  }
+}
