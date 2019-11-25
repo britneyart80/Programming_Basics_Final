@@ -70,23 +70,41 @@ const showerThoughts = [
   "You are the engine of your bicycle."
   ]
 
+
 $(document).ready(function () {
 
   $("#compliment-btn").on("click", function () {
     const random = Math.floor(Math.random() * compliments.length)
     $("#message").text(compliments[random])
     $("#message-header").text("Here's a compliment!")
+    confetti.start();
+    setTimeout(function() {
+      confetti.stop();
+    }, 3000);
   })
 
   $("#shower-btn").on("click", function () {
     const random = Math.floor(Math.random() * compliments.length)
     $("#message").text(showerThoughts[random])
     $("#message-header").text("Here's a shower thought!")
+    confetti.start();
+    setTimeout(function() {
+      confetti.stop();
+    }, 3000);
   })
 
   $("#fact-btn").on("click", function () {
     const random = Math.floor(Math.random() * compliments.length)
     $("#message").text(funFacts[random])
     $("#message-header").text("Here's a fun fact!")
+    confetti.start();
+    setTimeout(function() {
+      confetti.stop();
+    }, 3000);
   })
 })
+
+// document.getElementByClassName("close").addEventListener("click", confetti.stop());
+
+
+
