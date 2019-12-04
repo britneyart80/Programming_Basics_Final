@@ -70,6 +70,16 @@ const showerThoughts = [
   "You are the engine of your bicycle."
   ]
 
+  const displayMessage = function (arr, message) {
+    const random = Math.floor(Math.random() * arr.length)
+    $("#message").text(arr[random])
+    $("#message-header").text(message)
+    confetti.start();
+    setTimeout(function() {
+      confetti.stop();
+    }, 3000);
+  }
+
 
 $(document).ready(function () {
 
@@ -92,33 +102,16 @@ $(document).ready(function () {
   })
 
   $("#compliment-btn").on("click", function () {
-    const random = Math.floor(Math.random() * compliments.length)
-    $("#message").text(compliments[random])
-    $("#message-header").text("Here's a compliment!")
-    confetti.start();
-    setTimeout(function() {
-      confetti.stop();
-    }, 3000);
+    displayMessage(compliments, "Here's a compliment!")
   })
 
   $("#shower-btn").on("click", function () {
-    const random = Math.floor(Math.random() * compliments.length)
-    $("#message").text(showerThoughts[random])
-    $("#message-header").text("Here's a shower thought!")
-    confetti.start();
-    setTimeout(function() {
-      confetti.stop();
-    }, 3000);
+    displayMessage(showerThoughts, "Here's a shower thought!")
+
   })
 
   $("#fact-btn").on("click", function () {
-    const random = Math.floor(Math.random() * compliments.length)
-    $("#message").text(funFacts[random])
-    $("#message-header").text("Here's a fun fact!")
-    confetti.start();
-    setTimeout(function() {
-      confetti.stop();
-    }, 3000);
+    displayMessage(funFacts, "Here's a fun fact!")
   })
 })
 
