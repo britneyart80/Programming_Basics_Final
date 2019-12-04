@@ -73,6 +73,24 @@ const showerThoughts = [
 
 $(document).ready(function () {
 
+  $("body").mousemove(function (event) {
+    const x = event.pageX
+    const y = event.pageY
+
+    const div = document.createElement("div")
+    $(div).addClass("sparkle")
+    $("body").append(div)
+    $(div)
+    .css("position", "absolute")
+    .css("top", y)
+    .css("left", x)
+
+    setTimeout(function() {
+      $(div)
+      .remove()
+    }, 1000)
+  })
+
   $("#compliment-btn").on("click", function () {
     const random = Math.floor(Math.random() * compliments.length)
     $("#message").text(compliments[random])
@@ -105,6 +123,3 @@ $(document).ready(function () {
 })
 
 // document.getElementByClassName("close").addEventListener("click", confetti.stop());
-
-
-

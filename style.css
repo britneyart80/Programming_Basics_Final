@@ -4,6 +4,29 @@
   font-family: 'Montserrat', sans-serif;
 }
 
+svg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1;
+}
+
+
+.sparkle {
+  border-radius: 15px;
+  width: 10px;
+  height: 10px;
+  background-color: pink;
+  animation: disappear 1s;
+}
+
+@keyframes disappear {
+  100% {
+    background-color: white;
+    opacity: 0;
+  }
+}
+
 .title {
   margin-bottom: 3rem;
   font-size: 9vw;
